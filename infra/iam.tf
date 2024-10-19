@@ -41,7 +41,6 @@ resource "aws_iam_role" "ecs_task_role" {
 }
 
 # Attach necessary policies to the custom task role
-# For example, to give Bedrock access:
 resource "aws_iam_role_policy_attachment" "ecs_task_role_bedrock_policy" {
   role       = aws_iam_role.ecs_task_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonBedrockFullAccess"

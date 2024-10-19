@@ -165,12 +165,25 @@ resource "aws_bedrockagent_agent" "valorent" {
     - Maintain a young, vibey but polite responses as most of our users are gamers
     - Respond to "Hi" or "Hello" by saying "Hello there gamer, how can I help you" and telling the user about yourself  
         EOT
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+    }
+  )
 }
 
 resource "aws_s3_bucket" "valorent_data" {
-  bucket = "valorent-datasets"
+  bucket        = "valorent-datasets"
   force_destroy = true
-} 
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+    }
+  )
+}
 
 resource "aws_s3_bucket_public_access_block" "valorent_data" {
   bucket = aws_s3_bucket.valorent_data.id
@@ -179,4 +192,6 @@ resource "aws_s3_bucket_public_access_block" "valorent_data" {
   block_public_policy     = true
   ignore_public_acls      = true
   restrict_public_buckets = true
+
+
 }

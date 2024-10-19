@@ -1,7 +1,14 @@
 resource "aws_security_group" "alb" {
   name        = "alb-security-group"
   description = "Security group for ALB"
-  vpc_id      = var.vpc_id # Replace with your VPC ID
+  vpc_id      = var.vpc_id 
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+      Name = "alb-security-group"
+    }
+  )
 
   # Allow inbound HTTP traffic
   ingress {
@@ -27,9 +34,7 @@ resource "aws_security_group" "alb" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "alb-security-group"
-  }
+  
 }
 
 
@@ -43,9 +48,16 @@ resource "aws_lb" "agent_apps" {
 
   enable_deletion_protection = false
 
-  tags = {
-    Name = "agent-aapps"
-  }
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+      Name = "agent-aapps"
+    }
+  )
+
+  
 }
 
 # Create a target group
@@ -62,7 +74,7 @@ resource "aws_lb_target_group" "agent_apps" {
     unhealthy_threshold = 2
     interval            = 30
     matcher             = "200"
-    path                = "/health"  # Make sure this path exists in your application
+    path                = "/health"  
     port                = "traffic-port"
     protocol            = "HTTP"
     timeout             = 5
@@ -70,9 +82,14 @@ resource "aws_lb_target_group" "agent_apps" {
 
   deregistration_delay = 30
 
-  tags = {
-    Name = "agent-apps-tg"
-  }
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+      Name = "agent-apps-tg"
+    }
+  )
 }
 
 
@@ -86,6 +103,13 @@ resource "aws_lb_listener" "agent_apps" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.agent_apps.arn
   }
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+    }
+  )
 }
 
 # Output the ALB DNS name
@@ -104,7 +128,7 @@ output "target_group_arn" {
 resource "aws_security_group" "ecs_tasks" {
   name        = "ecs-tasks-security-group"
   description = "Security group for ECS tasks"
-  vpc_id      = var.vpc_id # Replace with your VPC ID
+  vpc_id      = var.vpc_id 
 
   # Allow inbound traffic from the ALB
   ingress {
@@ -122,9 +146,14 @@ resource "aws_security_group" "ecs_tasks" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "ecs-tasks-security-group"
-  }
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+      Name = "ecs-tasks-security-group"
+    }
+
+  )
 }
 
 
@@ -136,6 +165,5 @@ resource "aws_security_group_rule" "alb_to_ecs" {
   protocol                 = "tcp"
   security_group_id        = aws_security_group.alb.id
   source_security_group_id = aws_security_group.ecs_tasks.id
+  
 }
-
-# Allow traffic from ALB to ECS tasks in the ECS tasks' security group

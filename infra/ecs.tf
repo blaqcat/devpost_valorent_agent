@@ -7,12 +7,12 @@ resource "aws_ecs_service" "valorant_agent" {
 
   network_configuration {
     subnets          = ["subnet-03f6ae75b7be8cea2", "subnet-047b2d3a786588de6"]
-    security_groups  = [aws_security_group.ecs_tasks.id]  # Replace with your security group ID
+    security_groups  = [aws_security_group.ecs_tasks.id] # Replace with your security group ID
     assign_public_ip = true
   }
 
   load_balancer {
-    target_group_arn = aws_lb_target_group.agent_apps.arn  # Assuming you're using the target group from the previous example
+    target_group_arn = aws_lb_target_group.agent_apps.arn # Assuming you're using the target group from the previous example
     container_name   = "valorant_agent"
     container_port   = 8501
   }
