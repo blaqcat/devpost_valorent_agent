@@ -9,16 +9,14 @@ from io import BytesIO
 # AWS S3 configuration
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_REGION = 'us-east-1'  # Replace with your desired region
-DESTINATION_BUCKET = 'valorent-datasets'  # Replace with your bucket name
-
+AWS_REGION = 'us-east-1'  
+DESTINATION_BUCKET = 'valorent-datasets'  # 
 # Source S3 configuration
 SOURCE_S3_BUCKET_URL = "https://vcthackathon-data.s3.us-west-2.amazonaws.com"
 
-# (game-changers, vct-international, vct-challengers)
+
 LEAGUE = "game-changers"
 
-# (2022, 2023, 2024)
 YEAR = 2022
 
 # Initialize S3 client

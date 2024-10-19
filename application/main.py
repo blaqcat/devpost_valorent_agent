@@ -9,7 +9,7 @@ import base64
 # Set up AWS credentials
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_REGION = 'us-east-1'  # Replace with your agent's region if different
+AWS_REGION = 'us-east-1' 
 
 # Initialize the Bedrock Agent Runtime client
 bedrock_agent_runtime = boto3.client(

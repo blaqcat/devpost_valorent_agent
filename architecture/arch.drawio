@@ -111,6 +111,9 @@
                 <mxCell id="69" value="&lt;b&gt;Meta-LLM powered&amp;nbsp; Agent&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#1A1A1A;" vertex="1" parent="1">
                     <mxGeometry x="550.5" y="845" width="167" height="26" as="geometry"/>
                 </mxCell>
+                <mxCell id="70" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Designed by : Jerry Monyelo&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-562" y="1214" width="263" height="34" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
