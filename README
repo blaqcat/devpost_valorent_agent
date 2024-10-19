@@ -2,13 +2,14 @@ This the App created by Jerry Monyelo and team for the purpose of the ther DevPo
 
 the app is currently hosted at http://agent-aapps-920641776.us-east-1.elb.amazonaws.com/ for the judges to test
 
-![On-Desktop](image.png)
-![On-Mobile](mobile.jpg)
+<img src="image.png" alt="On Desktop">
+<img src="mobile.jpg" alt="On Mobile">
+
 
 
 
 User Interface:
-    
+
 The app has a Streamlit-based web interface with a custom background image related to Valorant.
 
 It's titled "EA SportS Valorant game Assistant" (though it's worth noting that Valorant is actually developed by Riot Games, not EA Sports).
