@@ -50,6 +50,50 @@ There's an option to view the raw bot response in an expandable section.
 
 Users can clear the chat history if needed.
 
+# List of Questions that can be asked
+
+Based on the provided data, here's a list of questions that can be asked from the agent:
+
+What is the full name of the team with the acronym LH?
+
+Which team has the slug "lone-way-esports"?
+
+What is the acronym for the team "MIR Gaming"?
+
+Can you tell me the name of the team with the ID "112439825505751243"?
+
+Which team has "pixel" as its slug?
+
+What is the full name of the team with the acronym UR?
+
+How many teams have "GC" in their name?
+
+What is the acronym for the team "Cherish Girls"?
+
+Which team has "SPEAR GAMING FEMALE" as its full name?
+
+What is the slug for the team with the acronym SGA?
+
+How many unique teams are listed in this data?
+
+Are there any teams that have multiple entries with different acronyms?
+
+Which teams don't have a dark logo URL?
+
+What is the home league ID for most of the teams?
+
+Is there a team with a different home league ID from the others?
+
+What is the full name of the team with the acronym OGX?
+
+How many teams have "Gaming" in their name?
+
+Which team has the longest full name?
+
+Are there any teams with identical IDs but different acronyms?
+
+What is the most common word in team names (excluding common words like "the", "and", etc.)?
+
 # Valorant Game Assistant Infrastructure
 
 This folder contains Terraform configurations to set up the infrastructure for the Valorant Game Assistant application on AWS.
