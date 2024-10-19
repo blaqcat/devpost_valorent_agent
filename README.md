@@ -2,11 +2,11 @@ This the App created by Jerry Monyelo and team for the purpose of the ther DevPo
 
 the app is currently hosted at http://agent-aapps-920641776.us-east-1.elb.amazonaws.com/ for the judges to test
 
-<img src="image.png" alt="On Desktop">
-<img src="mobile.jpg" alt="On Mobile">
 
 
 
+![Desktop](image.png)
+![Mobile](mobile.jpg)
 
 User Interface:
 
