@@ -4,6 +4,7 @@ import re
 import os
 from botocore.exceptions import ClientError
 import xml.etree.ElementTree as ET
+import base64
 
 # Set up AWS credentials
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -64,11 +65,48 @@ def invoke_agent(agent_id, agent_alias_id, prompt):
 
 
 
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode()
+    
+    st.markdown(
+       f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/jpeg;base64,{encoded_string});
+        background-size: cover;
+    }}
+    .stApp > header {{
+        background-color: transparent;
+    }}
+    .stApp {{
+        color: white;
+    }}
+    .stSidebar {{
+        background-color: rgba(0,0,0,0.5);
+    }}
+    /* New styles for chat messages */
+    .stChatMessage {{
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        padding: 20px !important;
+        border-radius: 10px !important;
+        margin-bottom: 10px !important;
+    }}
+    .stChatMessage p {{
+        color: white !important;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+
+add_bg_from_local('images/val_agents.jpeg')
 
 
 
 
-st.title("EA SporTS Valorant game Assistant")
+st.title("EA SportS Valorant game Assistant")
 
 # Input fields for Agent ID and Alias ID
 agent_id = st.sidebar.text_input("Agent ID", value="I5FTKIP4O2")

@@ -1,1 +1,44 @@
-.env
+This the App created by Jerry Monyelo and team for the purpose of the ther DevPost Hackthon
+
+
+User Interface:
+
+The app has a Streamlit-based web interface with a custom background image related to Valorant.
+
+It's titled "EA SportS Valorant game Assistant" (though it's worth noting that Valorant is actually developed by Riot Games, not EA Sports).
+
+Chat Functionality:
+
+Users can interact with the assistant through a chat interface.
+
+The chat history is maintained throughout the session.
+
+AI Integration:
+
+The app uses Amazon Bedrock to power its AI capabilities.
+
+It connects to a specific Bedrock agent using Agent ID and Agent Alias ID (which are set in the sidebar).
+
+Query Processing:
+
+When a user enters a question, it's sent to the Bedrock agent for processing.
+
+The agent's response is then displayed in the chat interface.
+
+Response Handling:
+
+The AI's responses are parsed and formatted for display.
+
+Responses include the main text content and potentially source references.
+
+Styling and Layout:
+
+The app uses a custom background image, likely featuring Valorant agents.
+
+Chat messages are displayed with a semi-transparent black background for better readability.
+
+Additional Features:
+
+There's an option to view the raw bot response in an expandable section.
+
+Users can clear the chat history if needed.
