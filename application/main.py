@@ -68,7 +68,7 @@ def invoke_agent(agent_id, agent_alias_id, prompt):
 
 
 
-st.title("EA Sports Agent Chat")
+st.title("EA SporTS Valorant game Assistant")
 
 # Input fields for Agent ID and Alias ID
 agent_id = st.sidebar.text_input("Agent ID", value="I5FTKIP4O2")
