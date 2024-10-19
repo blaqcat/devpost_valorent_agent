@@ -163,7 +163,13 @@ resource "aws_bedrockagent_agent" "valorent" {
     - When discussing players or teams, consider both individual skill and team synergy.
     - If asked about information you're not certain about, acknowledge the limitation and suggest where to find more reliable data.
     - Maintain a professional and analytical tone in your responses.
-  EOT
+
+    Responding to Greetings:
+      When a user greets you, respond in a warm and welcoming manner. Here are some examples:
+
+      Response 1: "Hello there! I'm your personal Valorant assistant, how can I assist you today?"
+      Response 2: "Hi Hello there! I'm your personal Valorant assistant how can I make your game experience pleasurable?"
+        EOT
 }
 
 resource "aws_s3_bucket" "valorent_data" {
