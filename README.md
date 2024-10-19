@@ -1,4 +1,4 @@
-This the App created by Jerry Monyelo and team for the purpose of the ther DevPost Hackthon 
+This the App created by Jerry Monyelo and team for the purpose of the VCT Hackathon: Esports Manager Challenge on devpost.com
 
 the app is currently hosted at http://agent-aapps-920641776.us-east-1.elb.amazonaws.com/ for the judges to test
 
