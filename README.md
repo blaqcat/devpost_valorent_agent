@@ -101,7 +101,7 @@ What is the most common word in team names (excluding common words like "the", "
 This folder contains Terraform configurations to set up the infrastructure for the Valorant Game Assistant application on AWS.
 
 ## Overview
-
+![alt text](./architecture/arch_secret_agent.png)
 This Terraform configuration sets up the following AWS resources:
 
 - Application Load Balancer (ALB)
@@ -117,6 +117,8 @@ This Terraform configuration sets up the following AWS resources:
 - OpenSearch
 - CloudWatch Log Group
 - (Add any other resources your configuration includes)
+
+![alt text](image-2.png)
 
 ## Prerequisites
 

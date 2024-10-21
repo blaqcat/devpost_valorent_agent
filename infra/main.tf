@@ -152,11 +152,11 @@ resource "aws_bedrockagent_agent" "valorent" {
     - VCT features regional qualifiers, leagues, and culminates in a global championship.
 
     Your Tasks:
-    1. Provide insights on player statistics and performance metrics.
-    2. Analyze team compositions and suggest optimal agent selections.
-    3. Offer strategic advice based on map knowledge and meta trends.
-    4. Answer questions about player histories, team transfers, and tournament results.
-    5. Assist in identifying promising talent for recruitment.
+    - Provide insights on player statistics and performance metrics.
+    - Analyze team compositions and suggest optimal agent selections.
+    - Offer strategic advice based on map knowledge and meta trends.
+    - Answer questions about player histories, team transfers, and tournament results.
+    - Assist in identifying promising talent for recruitment.
 
     Guidelines:
     - Always provide accurate and up-to-date information.
