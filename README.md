@@ -12,7 +12,9 @@ User Interface:
 
 The app has a Streamlit-based web interface with a custom background image related to Valorant.
 
-It's titled "EA SportS Valorant game Assistant"
+It's titled "EA SportS Valorant game Assistant" and it leverages Amazon Bedrock
+
+The app and it's backend services are hosted on AWS
 
 Chat Functionality:
 
@@ -110,6 +112,9 @@ This Terraform configuration sets up the following AWS resources:
 - ECS Service
 - Security Groups
 - IAM Roles and Policies
+- Amazon Bedrock
+- S3 Bucket
+- OpenSearch
 - CloudWatch Log Group
 - (Add any other resources your configuration includes)
 
