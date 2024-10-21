@@ -12,7 +12,7 @@ User Interface:
 
 The app has a Streamlit-based web interface with a custom background image related to Valorant.
 
-It's titled "EA SportS Valorant game Assistant" (though it's worth noting that Valorant is actually developed by Riot Games, not EA Sports).
+It's titled "EA SportS Valorant game Assistant"
 
 Chat Functionality:
 
