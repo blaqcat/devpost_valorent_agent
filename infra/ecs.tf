@@ -16,14 +16,29 @@ resource "aws_ecs_service" "valorant_agent" {
     container_name   = "valorant_agent"
     container_port   = 8501
   }
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+    }
+  )
 }
 
 # If you haven't defined the ECS cluster in Terraform yet, you can do so like this:
-resource "aws_ecs_cluster" "your_cluster" {
+resource "aws_ecs_cluster" "valorant_cluster" {
   name = "valorant_cluster"
+
+  tags = merge(
+    var.hackathon_tag,
+    {
+      create_by = "Terraform"
+    }
+  )
 }
 
-# If you haven't defined the task definition in Terraform yet, you can do so like this:
+
+
 data "aws_ecs_task_definition" "chat_agent" {
   task_definition = "chat-agents"
 }

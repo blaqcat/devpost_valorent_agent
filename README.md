@@ -119,6 +119,9 @@ This Terraform configuration sets up the following AWS resources:
 - (Add any other resources your configuration includes)
 
 ![alt text](image-2.png)
+![alt text](S3.png)
+![alt text](bed2.png)
+
 
 ## Prerequisites
 
